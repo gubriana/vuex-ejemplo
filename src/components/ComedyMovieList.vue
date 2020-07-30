@@ -2,9 +2,13 @@
   <div>
     <h3>Comedy Movie List</h3>
     <ul>
-      <li v-for="movie in comedyMovies" :key="movie.id">{{ movie.title }}</li>
+      <li v-for="movie in comedyMovies" :key="movie.id">
+        {{ movie.title }}
+        <img :src="require(`../assets/${movie.id}.jpg`)">
+      </li>
     </ul>
   </div>
+  <!--<img :src="require(../assets/${id}.jpg)">-->
 </template>
 
 <script>

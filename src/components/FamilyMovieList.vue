@@ -2,20 +2,25 @@
   <div>
     <h3>Family Movie List</h3>
     <ul>
-      <li v-for="movie in familyMovies" :key="movie.id">{{ movie.title }}</li>
+      <li v-for="movie in familyMovies" :key="movie.id">
+        {{ movie.title }}  
+        <img :src="require(`../assets/${movie.id}.jpg`)">
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-  export default {
-    name: "FamilyMovieList",
-    computed: {
-      familyMovies() {
-        return this.$store.state.movies.filter(movie => movie.genre === "Family");
-      }
+
+export default {
+  name: "FamilyMovieList",
+  computed: {
+    familyMovies() {
+      return this.$store.state.movies.filter(movie => movie.genre === "Family");
     }
-  };
+  }
+};
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
