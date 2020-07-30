@@ -1,13 +1,20 @@
 <template>
-  <div>
-    <h3>Family Movie List</h3>
-    <ul>
-      <li v-for="movie in familyMovies" :key="movie.id">
-        {{ movie.title }}  
-        <img :src="require(`../assets/${movie.id}.jpg`)">
-      </li>
-    </ul>
+  <div class="row">
+    <div class="col s12">
+      <h3 class="grey-text">Family Movie List</h3>
+      <div class="col m10">
+        <div class="card col m3 offset-m1 " v-for="movie in familyMovies" :key="movie.id">
+          <div class="card-image">
+            <img :src="require(`../assets/${movie.id}.jpg`)">
+          </div>
+          <div class="card-content">
+            <p>{{ movie.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <!--<img :src="require(../assets/${id}.jpg)">-->
 </template>
 
 <script>
@@ -22,21 +29,9 @@ export default {
 };
 
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.card {
+  padding: 0px;
 }
 </style>

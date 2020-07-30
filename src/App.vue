@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <FamilyMovieList />
+    <div class="divider"></div>
     <ComedyMovieList />
   </div>
 </template>
