@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col s12">
       <h3 class="grey-text">Family Movie List</h3>
-      <div class="col m10">
+      <div class="col m10 offset-m1">
         <div class="card col m3 offset-m1 " v-for="movie in familyMovies" :key="movie.id">
           <div class="card-image">
             <img :src="require(`../assets/${movie.id}.jpg`)">
